@@ -30,7 +30,7 @@ const GridContainer = styled.div`
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     grid-gap: 2rem;
-    padding: 1rem 8rem 5rem 8rem;
+    padding: 1rem 11rem 5rem 8rem;
     position: relative;
     overflow: visible;
 `;
