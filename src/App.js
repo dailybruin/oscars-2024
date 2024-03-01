@@ -32,12 +32,12 @@ function App() {
 `;
 
   const testCards1 = [];
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 10; i++) {
     testCards1.push(<Card>TODO</Card>)
   }
 
   const testCards2 = [];
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 4; i++) {
     testCards2.push(<Card>TODO</Card>)
   }
 
