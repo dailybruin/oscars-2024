@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import DesktopGrid from './components/DesktopGrid';
+import CoverageGrid from './components/CoverageGrid';
 
 function App() {
   // const [ data, setData ] = useState(null);
@@ -30,15 +31,21 @@ function App() {
     border: 10px red solid;
 `;
 
-  const testCards = [];
-  for (let i = 0; i < 5; i++) {
-    testCards.push(<Card>TODO</Card>)
+  const testCards1 = [];
+  for (let i = 0; i < 4; i++) {
+    testCards1.push(<Card>TODO</Card>)
+  }
+
+  const testCards2 = [];
+  for (let i = 0; i < 1; i++) {
+    testCards2.push(<Card>TODO</Card>)
   }
 
   return (
     <div className="App">
       <Header/>
-      <DesktopGrid cards={testCards}/>
+      <DesktopGrid cards={testCards1}/>
+      <CoverageGrid cards={testCards2} vertical_offset={'-18%'}/>
       <Footer/>
     </div>
   );

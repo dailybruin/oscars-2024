@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import DesktopGridBG from '../images/DesktopGridBG.png'
-import ArticleSparkles from '../images/ArticleSparkles.png'
+import CoverageSparkles from '../images/CoverageSparkles.png'
 import DesktopBGtop from '../images/DesktopBGtop.png'
 import DesktopBGmid from '../images/DesktopBGmid.png'
 import DesktopBGbot from '../images/DesktopBGbot.png'
@@ -44,15 +44,15 @@ const GridBG = styled.img`
 `;
 
 const CardContainer = styled.div`
-    aspect-ratio: 6.75 / 1;
+    aspect-ratio: 6 / 1;
 `;
 
 const TitleText = styled.p`
     font-family: porter;
     font-size: 6rem;
     color: ${gold};
-    margin: 0;
-    padding: 2rem;
+    margin: 0 0 10% 0;
+    padding: 5rem;
 `
 
 const SparklesContainer = styled.div`
@@ -63,40 +63,45 @@ const SparklesContainer = styled.div`
     height: 100%;
     text-align: center;
     z-index: 1;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const Sparkles = styled.div`
     width: 90%;
     height: 100%;
-    display: inline-block;
     z-index: 1;
-    background: url(${ArticleSparkles});
+    background: url(${CoverageSparkles});
     background-repeat: repeat-y;
     background-size: contain;
 `
 
-function DesktopGrid(props) {
-    let cards = null 
+function CoverageGrid(props) {
+    let cards = null;
     if (props.cards) {
         cards = props.cards.map((card, index) => (
             <CardContainer key={index}>{card}</CardContainer>
         ))
     }
 
+    let vertical_offset = props.vertical_offset ? props.vertical_offset : 0;
+
     return (
-        <Container>
+        <Container style={{ marginTop: vertical_offset }}>
             <GridTopBottom src={DesktopBGtop} />
             <Container>
                 <GridBG src={DesktopBGmid} />
-                <TitleText>Articles</TitleText>
+                <TitleText>RELATED COVERAGE</TitleText>
                 <SparklesContainer><Sparkles /></SparklesContainer>
                 <GridContainer>
                     {cards}
                 </GridContainer>
             </Container>
-            <GridTopBottom src={DesktopBGbot} />
         </Container>
     )
 }
 
-export default DesktopGrid;
+export default CoverageGrid;
