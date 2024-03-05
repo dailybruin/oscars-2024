@@ -6,9 +6,10 @@ import Footer from './components/Footer';
 import DesktopGrid from './components/DesktopGrid';
 import CoverageGrid from './components/CoverageGrid';
 import RelatedCard from "./components/Related_Card";
+import MobileGrid from "./components/MobileGrid";
 
 function App() {
-  // const [ data, setData ] = useState(null);
+  const [ data, setData ] = useState(null);
   
   useEffect(() => {
 		fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/oscars-2024")
@@ -45,10 +46,10 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <DesktopGrid cards={testCards1}/>
-      <CoverageGrid cards={testCards2} vertical_offset={'-18%'}/>
+      <MobileGrid cards={testCards1}/>
+      {/* <CoverageGrid cards={testCards2} vertical_offset={'-18%'}/>
       Hello Daily Bruin!
-      <RelatedCard></RelatedCard>
+      <RelatedCard></RelatedCard> */}
       <Footer/>
     </div>
   );
