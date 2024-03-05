@@ -71,7 +71,8 @@ const CardContainer = styled.div`
     position: relative;
     background-image: url(${MobileBack});
     background-size: cover;
-    background-position: center bottom -80%;
+    // background-position: center bottom -80%;
+    background-position: ${props => props.backgroundPosition}; /* Use props to set the background position */
     align-items: center;
     justify-content: center;
     aspect-ratio: 6.75 / 1;
@@ -86,6 +87,7 @@ transform: translate(-50%, -50%);
 background-color: white;
 width: 80%; /* Adjust the width percentage as needed */
 height: 60%; /* Adjust the height percentage as needed */
+overflow:hidden;
 `;
 
 const TitleText = styled.p`
@@ -102,8 +104,8 @@ function MobileGrid(props) {
     let cards = null 
     if (props.cards) {
         cards = props.cards.map((card, index) => (
-            <CardContainer>
-                <InnerBox></InnerBox>
+            <CardContainer backgroundPosition={index === 0 ? 'center bottom -85%' : 'center center'}>
+                <InnerBox>{card}</InnerBox>
                 {/* Your content here */}
             </CardContainer>
         ));
