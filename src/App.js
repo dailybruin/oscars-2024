@@ -5,15 +5,16 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import DesktopGrid from './components/DesktopGrid';
 import CoverageGrid from './components/CoverageGrid';
+import RelatedCard from "./components/Related_Card";
 
 function App() {
   // const [ data, setData ] = useState(null);
   
-  // useEffect(() => {
-	// 	fetch("https://kerckhoff.dailybruin.com/manage/packages/flatpages/oscars-2024")
-	// 	.then(res => res.json())
-	// 	.then(res => setData(res.data['article.aml']))
-  // }, [])
+  useEffect(() => {
+		fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/oscars-2024")
+		.then(res => res.json())
+		.then(res => setData(res.data['article.aml']))
+  }, [])
 
   // return data && (
   //   <div className="App">
@@ -46,6 +47,8 @@ function App() {
       <Header/>
       <DesktopGrid cards={testCards1}/>
       <CoverageGrid cards={testCards2} vertical_offset={'-18%'}/>
+      Hello Daily Bruin!
+      <RelatedCard></RelatedCard>
       <Footer/>
     </div>
   );
