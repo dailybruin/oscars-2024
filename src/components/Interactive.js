@@ -17,6 +17,7 @@ const BG = styled.img`
     display: block;
     position: absolute;
     z-index: -1;
+    width: 100%;
 `;
 
 

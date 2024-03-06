@@ -9,6 +9,8 @@ import CoverageGrid from './components/CoverageGrid';
 import MobileGrid from "./components/MobileGrid";
 import Blurb from "./components/Blurb";
 import InteractiveSection from "./components/Interactive";
+import { isMobile } from 'react-device-detect';
+
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -44,19 +46,33 @@ function App() {
   for (let i = 0; i < 4; i++) {
     testCards2.push(<Card>TODO</Card>)
   }
-
-  return data && (
-    <div className="App">
-      <Header/>
-      <MobileGrid cards={testCards1}/>
-      <Landing data={data}></Landing>
-      <Blurb blurb_text={data.blurb[0].blurb_text}></Blurb>
-      <DesktopGrid articles={data.articles}/>
-      <InteractiveSection></InteractiveSection>
-      <CoverageGrid articles={data.related_coverage} vertical_offset={'-18%'}/>
-      <Footer/>
-    </div>
-  );
+  if(!isMobile){
+    return data && (
+      <div className="App">
+        <Header/>
+        {/* <MobileGrid cards={testCards1}/> */}
+        <Landing data={data}></Landing>
+        <Blurb blurb_text={data.blurb[0].blurb_text}></Blurb>
+        <DesktopGrid articles={data.articles}/>
+        <InteractiveSection></InteractiveSection>
+        <CoverageGrid articles={data.related_coverage} vertical_offset={'-18%'}/>
+        <Footer/>
+      </div>
+    );
+  }
+  else{
+    return data && (
+      <div className="App">
+        <Header/>
+        <Landing data={data}></Landing>
+        <Blurb blurb_text={data.blurb[0].blurb_text}></Blurb>
+        {/* <MobileGrid cards={testCards1}/> */}
+        {/* <DesktopGrid articles={data.articles}/> */}
+        <CoverageGrid articles={data.related_coverage} vertical_offset={'-18%'}/>
+        <Footer/>
+      </div>
+    );
+  }
 }
 
 export default App;

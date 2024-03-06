@@ -6,6 +6,8 @@ import DesktopBGtop from '../images/DesktopBGtop.png'
 import DesktopBGmid from '../images/DesktopBGmid.png'
 import DesktopBGbot from '../images/DesktopBGbot.png'
 import RelatedCard from './Related_Card'
+import { mediaQueries } from '../shared/config';
+
 
 export const gold = '#9D7305';
 export const pink = '#F8D6CB';
@@ -15,6 +17,9 @@ const Container = styled.div`
     margin: 0 auto;
     z-index: 1;
     top: 300px;
+    display: block;
+    margin-bottom: 37rem;
+    
 `
 
 const GridTopBottom = styled.img`
@@ -27,6 +32,10 @@ const GridTopBottom = styled.img`
     padding: 0;
     top: 300px;
     position: relative;
+    ${mediaQueries.mobile}{
+        opacity: 0;
+    }
+
 `;
 
 const GridContainer = styled.div`
@@ -34,7 +43,16 @@ const GridContainer = styled.div`
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     grid-gap: 2rem;
-    padding: 1rem 11rem 5rem 8rem;
+    padding-left: 1rem;
+    padding-right: 10rem;
+    padding-bottom: 5rem;
+    margin-bottom: 37rem;
+    ${mediaQueries.mobile}{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
     position: relative;
     overflow: visible;
 `;
@@ -45,6 +63,9 @@ const GridBG = styled.img`
     width: 100%;
     height: 100%;
     z-index: -1;
+    ${mediaQueries.mobile}{
+        opacity: 0;
+    }
 `;
 
 const CardContainer = styled.div`
@@ -58,6 +79,15 @@ const TitleText = styled.p`
     color: ${gold};
     margin: 0 0 10% 0;
     padding: 5rem;
+    ${mediaQueries.mobile}{
+        font-family: porter;
+        font-size: 2rem;
+        color: ${gold};
+        margin: 0;
+        padding: 2rem;
+        z-index:1;
+    }
+
 `
 
 const SparklesContainer = styled.div`
@@ -104,6 +134,7 @@ function CoverageGrid(props) {
                     );
                 })
                 : null}
+                
                 </GridContainer>
             </Container>
         </Container>
