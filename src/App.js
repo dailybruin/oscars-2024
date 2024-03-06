@@ -6,9 +6,9 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import DesktopGrid from './components/DesktopGrid';
 import CoverageGrid from './components/CoverageGrid';
+import MobileGrid from "./components/MobileGrid";
 import Blurb from "./components/Blurb";
 import InteractiveSection from "./components/Interactive";
-
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -48,6 +48,7 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
+      <MobileGrid cards={testCards1}/>
       <Landing data={data}></Landing>
       <Blurb blurb_text={data.blurb[0].blurb_text}></Blurb>
       <DesktopGrid articles={data.articles}/>
