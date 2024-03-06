@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Landing from './components/Landing';
 import DesktopGrid from './components/DesktopGrid';
 import CoverageGrid from './components/CoverageGrid';
 import RelatedCard from "./components/Related_Card";
@@ -46,6 +47,7 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
+      <Landing data={data}></Landing>
       <Blurb blurb_text={data.blurb[0].blurb_text}></Blurb>
       <DesktopGrid articles={data.articles}/>
       <CoverageGrid cards={testCards2} vertical_offset={'-18%'}/>
