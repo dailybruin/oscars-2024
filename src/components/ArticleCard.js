@@ -3,13 +3,14 @@ import styled from 'styled-components';
 const OuterDiv = styled.div`
   position: relative;
   background-color: #dfaf98;
-  width: 80%;
+  width: 100%;
   height: auto;
   color: white;
   padding: 24px 30px;
   margin: auto;
   display: flex;
   align-items: center;
+  z-index: 5;
 
   @media screen and (max-width: 426px) {
     width: 75%;
@@ -80,11 +81,10 @@ const BylineDiv = styled.div`
   }
 `;
 
-const ArticleCard = ({ props }) => {
-  console.log(props);
+const ArticleCard = (props) => {
   return (
     <OuterDiv>
-      <a href={props.article_url}>
+      <a href={props.article_url} style={{ textDecoration: 'none', color: 'white' }}>
         <ImageDiv>
           <img
             src={props.article_image}
@@ -96,7 +96,7 @@ const ArticleCard = ({ props }) => {
         <a href={props.article_url} style={{ textDecoration: 'none', color: 'white' }}>
           <TitleDiv>{props.article_title}</TitleDiv>
         </a>
-        <DescriptionDiv>Description???</DescriptionDiv>
+        <DescriptionDiv>{props.article_description}</DescriptionDiv>
         <BylineDiv>By {props.article_byline}</BylineDiv>
       </TextDiv>
     </OuterDiv>

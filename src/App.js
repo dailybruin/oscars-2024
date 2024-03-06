@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Landing from './components/Landing';
 import DesktopGrid from './components/DesktopGrid';
 import CoverageGrid from './components/CoverageGrid';
-import RelatedCard from "./components/Related_Card";
 import MobileGrid from "./components/MobileGrid";
+import Blurb from "./components/Blurb";
+import InteractiveSection from "./components/Interactive";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -43,13 +45,15 @@ function App() {
     testCards2.push(<Card>TODO</Card>)
   }
 
-  return (
+  return data && (
     <div className="App">
       <Header/>
       <MobileGrid cards={testCards1}/>
-      {/* <CoverageGrid cards={testCards2} vertical_offset={'-18%'}/>
-      Hello Daily Bruin!
-      <RelatedCard></RelatedCard> */}
+      <Landing data={data}></Landing>
+      <Blurb blurb_text={data.blurb[0].blurb_text}></Blurb>
+      <DesktopGrid articles={data.articles}/>
+      <InteractiveSection></InteractiveSection>
+      <CoverageGrid articles={data.related_coverage} vertical_offset={'-18%'}/>
       <Footer/>
     </div>
   );

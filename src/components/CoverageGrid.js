@@ -5,6 +5,7 @@ import CoverageSparkles from '../images/CoverageSparkles.png'
 import DesktopBGtop from '../images/DesktopBGtop.png'
 import DesktopBGmid from '../images/DesktopBGmid.png'
 import DesktopBGbot from '../images/DesktopBGbot.png'
+import RelatedCard from './Related_Card'
 
 export const gold = '#9D7305';
 export const pink = '#F8D6CB';
@@ -13,6 +14,7 @@ const Container = styled.div`
     position: relative;
     margin: 0 auto;
     z-index: 1;
+    top: 300px;
 `
 
 const GridTopBottom = styled.img`
@@ -23,6 +25,8 @@ const GridTopBottom = styled.img`
     z-index: -1;
     margin: 0;
     padding: 0;
+    top: 300px;
+    position: relative;
 `;
 
 const GridContainer = styled.div`
@@ -45,6 +49,7 @@ const GridBG = styled.img`
 
 const CardContainer = styled.div`
     aspect-ratio: 6 / 1;
+    z-index: 5;
 `;
 
 const TitleText = styled.p`
@@ -80,12 +85,6 @@ const Sparkles = styled.div`
 `
 
 function CoverageGrid(props) {
-    let cards = null;
-    if (props.cards) {
-        cards = props.cards.map((card, index) => (
-            <CardContainer key={index}>{card}</CardContainer>
-        ))
-    }
 
     let vertical_offset = props.vertical_offset ? props.vertical_offset : 0;
 
@@ -97,7 +96,14 @@ function CoverageGrid(props) {
                 <TitleText>RELATED COVERAGE</TitleText>
                 <SparklesContainer><Sparkles /></SparklesContainer>
                 <GridContainer>
-                    {cards}
+                {props && props.articles ? props.articles.map((item) => {
+                    return(
+                        <CardContainer>
+                        <RelatedCard article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
+                        </CardContainer>
+                    );
+                })
+                : null}
                 </GridContainer>
             </Container>
         </Container>
