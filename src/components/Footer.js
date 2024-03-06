@@ -9,7 +9,7 @@ import { mediaQueries } from '../shared/config';
 
 
 const Container = styled.div`
-	background-color: black;
+	background-color: #DFAF98;
 	height: auto;
 	color: white;
 	padding: 60px 0 10px 0;
@@ -50,7 +50,7 @@ const Footer = () => {
           <a href="https://www.twitter.com/dailybruin" target="_blank"><img src={twitter}/></a>
           <a href="https://www.tiktok.com/@dailybruin" target="_blank"><img src={tiktok}/></a>
           <a href="http://eepurl.com/cFEiZX" target="_blank"><img src={email}/></a>
-          <p>Built with Suzy’s ♥ in Kerckhoff 118 by [developers]. Designed by [designers].</p>
+          <p>Built with Suzy’s ♥ in Kerckhoff 118 by Annie Tran, Donny Rimer, Ed Nawrocki, Hameed Shaik, Katherine Li, Maria Martins, Marvin Deng, Michelle Kim, Nicole Ju, Rama Das, Richelle Shim, Sakshi Thoutireddy, Yifan Tang, Yubo Zhang. Designed by Tyler Cho.</p>
         </Socials>
     </Container>
     )
