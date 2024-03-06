@@ -10,6 +10,7 @@ const OuterDiv = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
+  z-index: 5;
 
   @media screen and (max-width: 426px) {
     width: 75%;
@@ -83,7 +84,7 @@ const BylineDiv = styled.div`
 const ArticleCard = (props) => {
   return (
     <OuterDiv>
-      <a href={props.article_url}>
+      <a href={props.article_url} style={{ textDecoration: 'none', color: 'white' }}>
         <ImageDiv>
           <img
             src={props.article_image}

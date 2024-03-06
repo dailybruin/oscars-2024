@@ -6,6 +6,7 @@ import { mediaQueries } from '../shared/config';
 const OuterContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 5fr;
+    z-index: 5;
     ${mediaQueries.mobile}{
         display: block;
         width: 100%;
@@ -84,16 +85,18 @@ const RelatedCard = (props) =>
 {
     return(
         <>
+        <a href={props.article_url} style={{ textDecoration: 'none', color: 'white' }}>
         <OuterContainer>
             <Container>
-                <Photo src={props.article_img}></Photo>
+                <Photo src={props.article_image}></Photo>
             </Container>
             <Text>
-                    <Title> Title: {props.article_title} </Title>
+                    <Title> Title: {props.article_title}</Title>
                     <Blurb> {props.article_description}</Blurb>
                     <Byline> {props.article_byline} By Author FirstName LastName</Byline>
             </Text>
         </OuterContainer>
+        </a>
         </>
     )
 }

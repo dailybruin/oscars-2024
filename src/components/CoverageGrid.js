@@ -49,6 +49,7 @@ const GridBG = styled.img`
 
 const CardContainer = styled.div`
     aspect-ratio: 6 / 1;
+    z-index: 5;
 `;
 
 const TitleText = styled.p`
@@ -97,7 +98,9 @@ function CoverageGrid(props) {
                 <GridContainer>
                 {props && props.articles ? props.articles.map((item) => {
                     return(
+                        <CardContainer>
                         <RelatedCard article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
+                        </CardContainer>
                     );
                 })
                 : null}
