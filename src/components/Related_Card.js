@@ -4,12 +4,10 @@ import { mediaQueries } from '../shared/config';
 
 
 const OuterContainer = styled.div`
-    background-color: #FFE6A5;
     display: grid;
     grid-template-columns: 1fr 5fr;
     ${mediaQueries.mobile}{
         display: block;
-        background: radial-gradient(100% 100% at 50% 50%, #F8EADD 0%, #E5BBA4 100%);
         width: 100%;
     }
 `
@@ -92,11 +90,10 @@ const RelatedCard = (props) =>
             </Container>
             <Text>
                     <Title> Title: {props.article_title} </Title>
-                    <Blurb> {props.article_url} blah</Blurb>
+                    <Blurb> {props.article_description}</Blurb>
                     <Byline> {props.article_byline} By Author FirstName LastName</Byline>
             </Text>
         </OuterContainer>
-        <h1>Test</h1>
         </>
     )
 }

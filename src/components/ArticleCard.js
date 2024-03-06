@@ -81,7 +81,6 @@ const BylineDiv = styled.div`
 `;
 
 const ArticleCard = (props) => {
-  console.log("PROPS",props);
   return (
     <OuterDiv>
       <a href={props.article_url}>

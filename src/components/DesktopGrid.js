@@ -91,9 +91,8 @@ function DesktopGrid(props) {
                 <SparklesContainer><Sparkles /></SparklesContainer>
                 <GridContainer>
                 {props && props.articles ? props.articles.map((item) => {
-                    console.log(item.article_url)
                     return(
-                        <ArticleCard article_title={item.article_title} article_url="{item.article_url}" article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
+                        <ArticleCard article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
                     );
                 })
                 : null}
