@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const OuterDiv = styled.div`
   position: relative;
   background-color: #dfaf98;
-  width: 80%;
+  width: 100%;
   height: auto;
   color: white;
   padding: 24px 30px;
@@ -80,8 +80,8 @@ const BylineDiv = styled.div`
   }
 `;
 
-const ArticleCard = ({ props }) => {
-  console.log(props);
+const ArticleCard = (props) => {
+  console.log("PROPS",props);
   return (
     <OuterDiv>
       <a href={props.article_url}>
@@ -96,7 +96,7 @@ const ArticleCard = ({ props }) => {
         <a href={props.article_url} style={{ textDecoration: 'none', color: 'white' }}>
           <TitleDiv>{props.article_title}</TitleDiv>
         </a>
-        <DescriptionDiv>Description???</DescriptionDiv>
+        <DescriptionDiv>{props.article_description}</DescriptionDiv>
         <BylineDiv>By {props.article_byline}</BylineDiv>
       </TextDiv>
     </OuterDiv>

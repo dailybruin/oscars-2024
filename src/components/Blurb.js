@@ -4,6 +4,8 @@ import oscar from "../images/oscar.png";
 import { mediaQueries } from "../shared/config";
 
 const ImageContainer = styled.div`
+position: relative;
+  z-index: 2;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -24,11 +26,10 @@ const BlurbContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 170%;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: auto;
   object-fit: contain;
-  margin: 0 -30% 0 -34%;
   ${mediaQueries.mobile} {
     width: 140%;
     height: 150%;
@@ -38,9 +39,9 @@ const Image = styled.img`
 
 const OverlayOscarImage = styled.img`
   position: absolute;
-  height: 100%;
-  top: 5%;
-  left: 5%;
+  height: 63%;
+  top: 2%;
+  left: 8%;
   ${mediaQueries.mobile} {
     height: 90%;
     top: 25%;
@@ -50,7 +51,7 @@ const OverlayOscarImage = styled.img`
 
 const OverlayText = styled.div`
   position: absolute;
-  top: 10%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Sarala", sans-serif;
