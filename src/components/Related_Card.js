@@ -91,9 +91,9 @@ const RelatedCard = (props) =>
                 <Photo src={props.article_image}></Photo>
             </Container>
             <Text>
-                    <Title> Title: {props.article_title}</Title>
+                    <Title> {props.article_title}</Title>
                     <Blurb> {props.article_description}</Blurb>
-                    <Byline> {props.article_byline} By Author FirstName LastName</Byline>
+                    <Byline> By {props.article_byline}</Byline>
             </Text>
         </OuterContainer>
         </a>
