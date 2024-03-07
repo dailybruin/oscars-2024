@@ -19,6 +19,10 @@ const Container = styled.div`
     top: 300px;
     display: block;
     margin-bottom: 37rem;
+    ${mediaQueries.mobile}{
+        top: 0px;
+        margin-bottom: 0;
+    }
     
 `
 
@@ -52,6 +56,7 @@ const GridContainer = styled.div`
         margin-right: auto;
         padding-left: 4rem;
         padding-right: 4rem;
+        margin-bottom: 0rem;
     }
     position: relative;
     overflow: visible;

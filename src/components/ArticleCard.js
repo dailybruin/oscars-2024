@@ -17,6 +17,7 @@ const OuterDiv = styled.div`
     padding: 0;
     align-items: center;
     flex-direction: column;
+    top: 30px;
   }
 `;
 
@@ -57,7 +58,7 @@ const TitleDiv = styled.div`
   font-size: 36px;
 
   @media screen and (max-width: 426px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -67,7 +68,7 @@ const DescriptionDiv = styled.div`
   font-size: 24px;
 
   @media screen and (max-width: 426px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
