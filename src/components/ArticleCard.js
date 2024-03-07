@@ -17,7 +17,6 @@ const OuterDiv = styled.div`
     padding: 0;
     align-items: center;
     flex-direction: column;
-    top: 30px;
   }
 `;
 
@@ -32,6 +31,7 @@ const ImageDiv = styled.div`
     width: 100%;
     height 154px;
     margin-left: 0px;
+    margin-right: 0px;
   }
 `;
 
@@ -58,7 +58,7 @@ const TitleDiv = styled.div`
   font-size: 36px;
 
   @media screen and (max-width: 426px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
@@ -68,7 +68,7 @@ const DescriptionDiv = styled.div`
   font-size: 24px;
 
   @media screen and (max-width: 426px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 

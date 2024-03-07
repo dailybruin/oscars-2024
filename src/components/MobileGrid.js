@@ -53,7 +53,7 @@ const CardContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: -168px;
-    // padding-top: 15px; // Push content 10 pixels down from center
+    // padding-bottom: 40px; // Push content 10 pixels down from center
     overflow: hidden;
 `;
 
@@ -66,6 +66,15 @@ const GridContainer = styled.div`
     overflow: visible;
     width: 100%; // Corrected syntax from = to :
     margin-bottom: 100px;
+`;
+
+const ArticleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; // Use column for vertical stacking if needed
+  // Add additional styling here as needed, e.g., padding, margin adjustments
+  margin-bottom: 5px;
 `;
 
 
@@ -83,7 +92,9 @@ function MobileGrid(props) {
                 {props && props.articles ? props.articles.map((item) => {
                     return (
                         <CardContainer>
-                            <ArticleCard margin-top="20px" article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
+                            <ArticleWrapper>
+                            <ArticleCard article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
+                            </ArticleWrapper>
                         </CardContainer>
                     );
                 })
