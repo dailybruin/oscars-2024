@@ -14,14 +14,7 @@ const RectangleImage = styled.img`
 `;
 
 
-const Container = styled.div`
-    position: relative;
-    margin: 0 auto;
-    z-index: 1;
-`
-
 const RectangleContainer = styled.div`
-
     position: relative;
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -29,48 +22,6 @@ const RectangleContainer = styled.div`
     overflow:visible;
     width:100%
     z-index:-2;
-`;
-
-
-
-const MobCont = styled.img`
-    display: block;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: ${props => props.zIndex}; /* Set z-index dynamically */
-    margin: 0;
-    padding: 0;
-`;
-const MobCont2 = styled.img`
-    display: block;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: ; /* Set z-index dynamically */
-    margin: 0;
-    padding: 0;
-`;
-const GridContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    grid-gap: 2rem;
-    position: relative;
-    overflow: visible;
-    width = 100%;
-`;
-
-
-const InnerBox = styled.div`
-position: absolute;
-top: 35%;
-left: 50%;
-transform: translate(-50%, -50%);
-background-color: white;
-width: 80%; /* Adjust the width percentage as needed */
-height: 60%; /* Adjust the height percentage as needed */
-overflow:hidden;
 `;
 
 const TitleText = styled.p`
@@ -84,60 +35,44 @@ const TitleText = styled.p`
 
 const CardContainer = styled.div`
     width: 100%;
-    height: auto:
+    height: 100vh;
     position: relative;
     background-image: url(${MobileBack});
     background-size: cover;
+    display: flex; // Enables flexbox layout
     justify-content: center;
     align-items: center;
 `;
 
+const GridContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+    position: relative;
+    overflow: visible;
+    width = 100%;
+`;
 
 function MobileGrid(props) {
     return (
-
+        <>
+        <RectangleContainer>
+                <RectangleImage src={Rectangle} />
+                <TitleText>Articles</TitleText>
+        </RectangleContainer>
+        
         <GridContainer>
-        {props && props.articles ? props.articles.map((item) => {
-            return(
-                <CardContainer> 
-                 <div > </div><div > </div><div > </div>
-                 <ArticleCard article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
-                 <div > </div>
-                </CardContainer>
-            );
-        })
-        : null}
-       </GridContainer>
+                {props && props.articles ? props.articles.map((item) => {
+                    return (
+                        <CardContainer>
+                            <ArticleCard article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
+                        </CardContainer>
+                    );
+                })
+                    : null}
+            </GridContainer></>
     )
 }
-//     if (props.cards) {
-//         cards = props.cards.map((card, index) => (
-//             <CardContainer backgroundPosition={index === 0 ? 'center bottom -85%' : 'center center'}>
-//                 <InnerBox>
-//                     <Card>article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image}</Card>
-//                 </InnerBox>
-//             </CardContainer>
-//         ));
-//     } else {
-//         // Example of adding a single Card directly if no props.cards are provided
-//         cards = (
-//             <CardContainer backgroundPosition='center center'>
-//                 <InnerBox>
-//                     <Card>Example Card Content</Card>
-//                 </InnerBox>
-//             </CardContainer>
-//         );
-//     }
-
-//     return (
-//         <Container>
-//             <RectangleContainer>
-//                 <RectangleImage src={Rectangle} />
-//                 <TitleText>Articles</TitleText>
-//             </RectangleContainer>          
-//             {cards}
-//         </Container>
-//     );
-// }
 
 export default MobileGrid;
