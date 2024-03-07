@@ -16,8 +16,13 @@ const Container = styled.div`
     text-align: center;
 	h1 {
 		margin: 0;
-		font-family: 'ITC Century';
+    font-family: 'ITCCenturyStdBook';
     font-size: 30px;
+    font-weight: 400;
+    text-shadow: 0px 4px 4px #00000040;
+
+
+
 	}
   /* margin-bottom: 20px; */
 `
