@@ -50,7 +50,7 @@ const Footer = () => {
           <a href="https://www.twitter.com/dailybruin" target="_blank" rel="noreferrer"><img src={twitter}/></a>
           <a href="https://www.tiktok.com/@dailybruin" target="_blank" rel="noreferrer"><img src={tiktok}/></a>
           <a href="http://eepurl.com/cFEiZX" target="_blank" rel="noreferrer"><img src={email}/></a>
-          <p>Built with Suzy’s ♥ in Kerckhoff 118 by Annie Tran, Donny Rimer, Ed Nawrocki, Hameed Shaik, Katherine Li, Maria Martins, Marvin Deng, Michelle Kim, Nicole Ju, Rama Das, Richelle Shim, Sakshi Thoutireddy, Yifan Tang, Yubo Zhang. Designed by Tyler Cho.</p>
+          <p>Built with Suzy’s ♥ in Kerckhoff 118 by Annie Tran, Donny Rimer, Ed Nawrocki, Hameed Shaik, Katherine Li, Maria Martins, Marvin Deng, Michelle Kim, Nicole Ju, Rama Das, Richelle Shim, Sakshi Thoutireddy, Yifan Tang, Yubo Zhang. Designed by Emma Cotter.</p>
         </Socials>
     </Container>
     )

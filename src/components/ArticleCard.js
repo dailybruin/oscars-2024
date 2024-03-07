@@ -21,7 +21,6 @@ const OuterDiv = styled.div`
 `;
 
 const ImageDiv = styled.div`
-  background-color: white;
   width: 190px;
   height: 170px;
   margin-right: 32px;
@@ -29,7 +28,7 @@ const ImageDiv = styled.div`
 
   @media screen and (max-width: 426px) {
     width: 100%;
-    height 154px;
+    height auto;
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -48,7 +47,8 @@ const TextDiv = styled.div`
   text-align: left;
 
   @media screen and (max-width: 426px) {
-
+    padding-top: 10%;
+    padding-bottom: 15%;
   }
 `;
 
@@ -58,7 +58,7 @@ const TitleDiv = styled.div`
   font-size: 36px;
 
   @media screen and (max-width: 426px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
 
@@ -68,7 +68,7 @@ const DescriptionDiv = styled.div`
   font-size: 24px;
 
   @media screen and (max-width: 426px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
 
@@ -78,7 +78,7 @@ const BylineDiv = styled.div`
   font-size: 36px;
 
   @media screen and (max-width: 426px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
 
@@ -89,7 +89,7 @@ const ArticleCard = (props) => {
         <ImageDiv>
           <img
             src={props.article_image}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', maxHeight: '200px', objectFit: 'cover' }}
           />
         </ImageDiv>
       </a>

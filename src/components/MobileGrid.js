@@ -31,7 +31,7 @@ const RectangleContainer = styled.div`
     overflow:visible;
     width:100%
     z-index: 1;
-    margin-bottom: 100px;
+    margin-bottom: 20vh;
 `;
 
 const TitleText = styled.p`
@@ -45,7 +45,7 @@ const TitleText = styled.p`
 
 const CardContainer = styled.div`
 width: 100%;
-height: 110vh;
+height: 100vh;
 position: relative;
 background-image: url(${MobileBack});
 background-size: contain; // Adjusts background size to make sure the entire image is visible
@@ -54,7 +54,7 @@ background-repeat: no-repeat; // Prevents the background image from repeating
 display: flex;
 justify-content: center;
 align-items: center;
-// margin-top: -320px;
+margin-top: -20vh;
 overflow: hidden;
 `;
 
@@ -66,7 +66,7 @@ const GridContainer = styled.div`
     position: relative;
     overflow: visible;
     width: 100%; // Corrected syntax from = to :
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
 `;
 
 const ArticleWrapper = styled.div`
@@ -97,12 +97,11 @@ const ArticleWrapper = styled.div`
 function MobileGrid(props) {
     return (
         <>
-        <PinkBox />
         <RectangleContainer>
                 <RectangleImage src={Rectangle} />
                 <TitleText>Articles</TitleText>
         </RectangleContainer>
-        
+        {/* <PinkBox /> */}
         <GridContainer>
                 {props && props.articles ? props.articles.map((item) => {
                     return (
