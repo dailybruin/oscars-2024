@@ -20,6 +20,7 @@ position: relative;
 
 const BlurbContainer = styled.div`
   position: relative;
+  width: 100%;
   // top: -85px;
   ${mediaQueries.mobile} {
     top: -40px;
