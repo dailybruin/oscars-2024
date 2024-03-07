@@ -31,7 +31,7 @@ const RectangleContainer = styled.div`
     overflow:visible;
     width:100%
     z-index: 1;
-    margin-bottom: 25px;
+    margin-bottom: 100px;
 `;
 
 const TitleText = styled.p`
@@ -44,17 +44,18 @@ const TitleText = styled.p`
 `
 
 const CardContainer = styled.div`
-    width: 100%;
-    height: 110vh;
-    position: relative;
-    background-image: url(${MobileBack});
-    background-size: cover;
-    display: flex; // Enables flexbox layout
-    justify-content: center;
-    align-items: center;
-    margin-top: -168px;
-    // padding-bottom: 40px; // Push content 10 pixels down from center
-    overflow: hidden;
+width: 100%;
+height: 110vh;
+position: relative;
+background-image: url(${MobileBack});
+background-size: contain; // Adjusts background size to make sure the entire image is visible
+background-position: center; // Centers the background image in the container
+background-repeat: no-repeat; // Prevents the background image from repeating
+display: flex;
+justify-content: center;
+align-items: center;
+// margin-top: -320px;
+overflow: hidden;
 `;
 
 const GridContainer = styled.div`
@@ -74,9 +75,23 @@ const ArticleWrapper = styled.div`
   align-items: center;
   flex-direction: column; // Use column for vertical stacking if needed
   // Add additional styling here as needed, e.g., padding, margin adjustments
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 `;
 
+// const BottomFrame = styled.div`
+//     width: 100%;
+//     height: 110vh;
+//     position: relative;
+//     background-image: url(${MobileBack});
+//     background-size: contain; // Adjusts background size to make sure the entire image is visible
+//     background-position: center; // Centers the background image in the container
+//     background-repeat: no-repeat; // Prevents the background image from repeating
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 0px;
+//     overflow: hidden;
+// `;
 
 
 function MobileGrid(props) {
@@ -100,7 +115,6 @@ function MobileGrid(props) {
                 })
                     : null}
             </GridContainer>
-
             </>
             
     )
