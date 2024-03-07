@@ -16,7 +16,7 @@ const Container = styled.div`
     text-align: center;
 	h1 {
 		margin: 0;
-		font-family: 'Times New Roman', Times, serif;
+		font-family: 'ITC Century';
     font-size: 30px;
 	}
   /* margin-bottom: 20px; */
