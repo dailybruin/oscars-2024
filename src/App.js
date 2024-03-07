@@ -66,7 +66,7 @@ function App() {
         <Header/>
         <Landing data={data}></Landing>
         <Blurb blurb_text={data.blurb[0].blurb_text}></Blurb>
-        {/* <MobileGrid cards={testCards1}/> */}
+         <MobileGrid articles={data.articles}/> 
         {/* <DesktopGrid articles={data.articles}/> */}
         <CoverageGrid articles={data.related_coverage} vertical_offset={'-18%'}/>
         <Footer/>
