@@ -9,8 +9,8 @@ const RectangleImage = styled.img`
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
-    z-index: -1; /* Set z-index to a lower value */
+    height: 125%;
+    z-index: 1; /* Set z-index to a lower value */
 `;
 
 
@@ -21,7 +21,8 @@ const RectangleContainer = styled.div`
     align-items: center; /* Center vertically */
     overflow:visible;
     width:100%
-    z-index:-2;
+    z-index: 1;
+    margin-bottom: -34px;
 `;
 
 const TitleText = styled.p`
@@ -42,16 +43,18 @@ const CardContainer = styled.div`
     display: flex; // Enables flexbox layout
     justify-content: center;
     align-items: center;
+    margin-top: -90px;
 `;
 
 const GridContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    grid-gap: 2rem;
+    grid-gap: -2rem;
     position: relative;
     overflow: visible;
     width = 100%;
+    margin-bottom: 100px;
 `;
 
 function MobileGrid(props) {
@@ -66,12 +69,15 @@ function MobileGrid(props) {
                 {props && props.articles ? props.articles.map((item) => {
                     return (
                         <CardContainer>
-                            <ArticleCard article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
+                            <ArticleCard margin-top="20px" article_title={item.article_title} article_url={item.article_url} article_byline={item.article_byline} article_image={item.article_image} article_description={item.article_description} />
                         </CardContainer>
                     );
                 })
                     : null}
-            </GridContainer></>
+            </GridContainer>
+
+            </>
+            
     )
 }
 

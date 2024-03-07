@@ -30,7 +30,7 @@ const ImageDiv = styled.div`
   @media screen and (max-width: 426px) {
     width: 100%;
     height 154px;
-    margin: 0;
+    margin-right: 0px;
   }
 `;
 
@@ -47,7 +47,7 @@ const TextDiv = styled.div`
   text-align: left;
 
   @media screen and (max-width: 426px) {
-    padding: 40px 10px;
+
   }
 `;
 
