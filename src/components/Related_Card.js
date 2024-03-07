@@ -93,7 +93,7 @@ const RelatedCard = (props) =>
             <Text>
                     <Title> {props.article_title}</Title>
                     <Blurb> {props.article_description}</Blurb>
-                    <Byline> {props.article_byline}</Byline>
+                    <Byline> By {props.article_byline}</Byline>
             </Text>
         </OuterContainer>
         </a>

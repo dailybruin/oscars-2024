@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
 import landingImage from "../images/landingImage.png"
+import animation from "../images/oscars2024flatpage.gif"
+
 
 const Container = styled.div`
   width: 100%;
@@ -41,7 +43,7 @@ const Credits = styled.div`
 export default function Landing(props) {
     return (
         <><Container>
-            {<Image src={landingImage}></Image>}
+            {<Image src={animation}></Image>}
         </Container>
 
         <Credits>

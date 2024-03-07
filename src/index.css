@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'ITCCenturyStdBook';
+  src: url('./images/ITC_Century_Std_Book.ttf') format('truetype');
+}
