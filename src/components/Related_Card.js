@@ -14,7 +14,9 @@ const OuterContainer = styled.div`
 `
 
 const Container = styled.div` 
-    width: 203px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 205px;
     height: 164px;
     border-radius: 20px;
     border: 15px solid #E8C467;
@@ -27,17 +29,18 @@ const Container = styled.div`
     }
 `
 const Photo = styled.img`
-    width: 190px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
     border: 10px solid #FFE6A5;
     margin-top: -3px;
     margin-left: -3px;
+    object-fit: cover;
     ${mediaQueries.mobile}{
         margin: auto;
-        width: 170px;
         margin-bottom: 10px;
-        height: 140px;
+        width: 100%;
+        height: 100%;
         margin-left: -5px;
         margin-top: -5px;
     }

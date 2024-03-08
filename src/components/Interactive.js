@@ -41,6 +41,12 @@ function InteractiveSection(props) {
                 <BG src={Interactive} />
                 <TitleText>INTERACTIVE</TitleText>
             </Container>
+            <iframe
+                src="https://x.com/dailybruin/status/1765921810863026299?s=20"
+            width="80%"
+            height="100%"
+            style={{ border: "none", position: "relative", zIndex: 5}}  // Correct way to apply styles in JSX
+        ></iframe>
         </Container>
     )
 }
